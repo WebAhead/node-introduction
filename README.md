@@ -47,7 +47,7 @@ You can import values that are exported from another file using the `require` ke
 
 ```js
 // inside index.js
-const whateverNameWeWant = require("./message");
+const whateverNameWeWant = require("./hello");
 
 console.log(whateverNameWeWant); // logs "hello"
 ```
@@ -59,7 +59,7 @@ Node comes with a load of useful modules built-in. You can import these the same
 ```js
 const fs = require("fs");
 
-fs.readFile("blah.tx");
+fs.readFile("blah.txt");
 ```
 
 If you're using a package manager like `npm` to install modules that other people have created you can import them in the same way as built-in ones.
