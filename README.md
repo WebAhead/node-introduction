@@ -9,8 +9,22 @@ JavaScript was created in 1995 as a programming language specifically for web pa
 Node was created in 2009 as a way to run JS anywhere: e.g. on your own computer or a web server. It rips out the V8 JS engine from the Chrome web browser and lets you run that on its own.
 
 ## Installation
+The best way to download node is through nvm, if the steps don't work for you try [this link](https://github.com/nvm-sh/nvm#installing-and-updating):
 
-If you don't already have Node installed you can get an installer [on their website](https://nodejs.org/). It can be useful to instead install Node with a "version manager", which will let you easily switch between different version of Node (this is useful for testing). [Node Version Manager](https://github.com/nvm-sh/nvm#installing-and-updating) is the most popular.
+#### 1. 
+  - `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash`
+  
+  OR
+  - `wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash`
+
+#### 2.
+```sh
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+```
+
+#### 3. 
+  - `nvm install node`
 
 ## Usage
 
@@ -61,7 +75,5 @@ const fs = require("fs");
 
 fs.readFile("blah.txt");
 ```
-
-If you're using a package manager like `npm` to install modules that other people have created you can import them in the same way as built-in ones.
 
 **Note**: You may have come across ES Modules, which are a new standard JS language feature that work in a similar way. Node was created before ES Modules existed, so it has its own different system. The Node team are currently working on ESM support.
